@@ -1,5 +1,4 @@
-﻿using CooperaSharp_DependencyExplosion.Transactors;
-using Moonad;
+﻿using Moonad;
 
 namespace CooperaSharp_DependencyExplosion
 {

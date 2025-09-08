@@ -13,6 +13,4 @@ namespace CooperaSharp_DependencyExplosion
             //Fake refund payment
             error;
     }
-    {
-    }
 }

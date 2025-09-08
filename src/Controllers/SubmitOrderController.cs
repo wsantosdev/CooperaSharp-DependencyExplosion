@@ -9,7 +9,7 @@ namespace CooperaSharp_DependencyExplosion.Controllers
         [HttpPost]
         public IActionResult SubmitOrder([FromBody] OrderSubmissionRequest request)
         {
-            var result = processor.Process(request);
+            var result = processor.Process(new OrderSubmissionBag { Request = request, Customer = null, Order = null });
             
             return result 
                     ? Ok()
