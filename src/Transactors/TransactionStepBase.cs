@@ -16,6 +16,9 @@ namespace CooperaSharp_DependencyExplosion
             if(result && next is not null)
                 return next.Execute(ref input);
             
+            if(next is null)
+                return result;
+
             return Rollback(result);
         }
 
