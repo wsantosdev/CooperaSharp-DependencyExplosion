@@ -1,0 +1,6 @@
+@CooperaSharp_DependencyExplosion_HostAddress = http://localhost:5054
+
+GET {{CooperaSharp_DependencyExplosion_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
