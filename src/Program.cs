@@ -9,6 +9,15 @@ namespace CooperaSharp_DependencyExplosion
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddScoped<OrderSubmissionTransactor>();
+            builder.Services.AddScoped<CustomerDataAccess>();
+            builder.Services.AddScoped<CustomerValidationStep>();
+            builder.Services.AddScoped<FreightCalculationStep>();
+            builder.Services.AddScoped<OrderAuditStep>();
+            builder.Services.AddScoped<OrderNotificationStep>();
+            builder.Services.AddScoped<OrderPaymentStep>();
+            builder.Services.AddScoped<OrderPersistenceStep>();
+            builder.Services.AddScoped<OrderStockReservationStep>();
 
             var app = builder.Build();
 
