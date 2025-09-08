@@ -4,12 +4,12 @@ namespace CooperaSharp_DependencyExplosion.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SubmitOrderController(OrderSubmissionTransactor processor) : ControllerBase
+    public class SubmitOrderController(OrderSubmissionTransactor transactor) : ControllerBase
     {
         [HttpPost]
         public IActionResult SubmitOrder([FromBody] OrderSubmissionRequest request)
         {
-            var result = processor.Process(new OrderSubmissionBag { Request = request, Customer = null, Order = null });
+            var result = transactor.Process(new OrderSubmissionBag { Request = request, Customer = null, Order = null });
             
             return result 
                     ? Ok()
